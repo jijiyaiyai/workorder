@@ -1,4 +1,4 @@
-package com.fr.workorder.Utils;
+package com.fr.workorder.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

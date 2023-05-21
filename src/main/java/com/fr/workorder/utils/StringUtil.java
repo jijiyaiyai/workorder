@@ -1,4 +1,4 @@
-package com.fr.workorder.Utils;
+package com.fr.workorder.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;

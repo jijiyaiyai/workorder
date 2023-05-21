@@ -21,7 +21,7 @@ public class ServiceLogAspect {
     private static final Logger logger = LoggerFactory.getLogger(ServiceLogAspect.class);
 
     //在调用service包中的服务时
-    @Pointcut("execution(* com.franky.community.service.*.*(..))")
+    @Pointcut("execution(* com.fr.workorder.service.*.*(..))")
     public void pointcut() {
 
     }

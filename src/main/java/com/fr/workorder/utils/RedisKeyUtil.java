@@ -1,4 +1,4 @@
-package com.fr.workorder.Utils;
+package com.fr.workorder.utils;
 
 public class RedisKeyUtil {
     private static final String SPLIT = ":";
