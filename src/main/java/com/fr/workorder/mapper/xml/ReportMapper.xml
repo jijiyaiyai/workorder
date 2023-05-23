@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fr.workorder.mapper.ReportMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fr.workorder.entity.Report">
+        <id column="report_id" property="reportId" />
+        <result column="report_type" property="reportType" />
+        <result column="report_time" property="reportTime" />
+        <result column="report_start_time" property="reportStartTime" />
+        <result column="report_end_time" property="reportEndTime" />
+        <result column="overtime" property="overtime" />
+        <result column="overtime_order_id" property="overtimeOrderId" />
+        <result column="completion" property="completion" />
+        <result column="completion_order_id" property="completionOrderId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        report_id, report_type, report_time, report_start_time, report_end_time, overtime, overtime_order_id, completion, completion_order_id
+    </sql>
+
+</mapper>

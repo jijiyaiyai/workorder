@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fr.workorder.mapper.CompanyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fr.workorder.entity.Company">
+        <id column="company_id" property="companyId" />
+        <result column="company_name" property="companyName" />
+        <result column="company_level" property="companyLevel" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="district" property="district" />
+        <result column="town" property="town" />
+        <result column="parent_company_id" property="parentCompanyId" />
+        <result column="child_company_id" property="childCompanyId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        company_id, company_name, company_level, province, city, district, town, parent_company_id, child_company_id
+    </sql>
+
+</mapper>

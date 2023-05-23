@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fr.workorder.mapper.ApprovalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fr.workorder.entity.Approval">
+        <id column="approval_id" property="approvalId" />
+        <result column="work_order_id" property="workOrderId" />
+        <result column="approval_time" property="approvalTime" />
+        <result column="approver_id" property="approverId" />
+        <result column="approval_company" property="approvalCompany" />
+        <result column="approval_level" property="approvalLevel" />
+        <result column="approval_result" property="approvalResult" />
+        <result column="approval_remark" property="approvalRemark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        approval_id, work_order_id, approval_time, approver_id, approval_company, approval_level, approval_result, approval_remark
+    </sql>
+
+</mapper>

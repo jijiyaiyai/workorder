@@ -1,4 +1,4 @@
-package com.fr.workorder.control.aspect;
+package com.fr.workorder.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;

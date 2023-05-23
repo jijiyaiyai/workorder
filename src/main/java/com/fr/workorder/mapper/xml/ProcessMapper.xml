@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fr.workorder.mapper.ProcessMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fr.workorder.entity.Process">
+        <id column="process_id" property="processId" />
+        <result column="work_order_id" property="workOrderId" />
+        <result column="process_time" property="processTime" />
+        <result column="processor_id" property="processorId" />
+        <result column="company_id" property="companyId" />
+        <result column="department_id" property="departmentId" />
+        <result column="process_result" property="processResult" />
+        <result column="process_remark" property="processRemark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        process_id, work_order_id, process_time, processor_id, company_id, department_id, process_result, process_remark
+    </sql>
+
+</mapper>

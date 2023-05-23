@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fr.workorder.mapper.WorkorderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fr.workorder.entity.Workorder">
+        <id column="work_order_id" property="workOrderId" />
+        <result column="work_order_type" property="workOrderType" />
+        <result column="work_order_status" property="workOrderStatus" />
+        <result column="work_order_title" property="workOrderTitle" />
+        <result column="work_order_details" property="workOrderDetails" />
+        <result column="suggest_level" property="suggestLevel" />
+        <result column="suggest_department" property="suggestDepartment" />
+        <result column="submit_time" property="submitTime" />
+        <result column="due_time" property="dueTime" />
+        <result column="complete_time" property="completeTime" />
+        <result column="overdue" property="overdue" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        work_order_id, work_order_type, work_order_status, work_order_title, work_order_details, suggest_level, suggest_department, submit_time, due_time, complete_time, overdue
+    </sql>
+
+</mapper>
