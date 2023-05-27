@@ -19,5 +19,10 @@
     <sql id="Base_Column_List">
         company_id, company_name, company_level, province, city, district, town, parent_company_id, child_company_id
     </sql>
+    <select id="selectByCompanyName" resultType="com.fr.workorder.entity.Company">
+        select <include refid="Base_Column_List"/>
+        from company
+        where company_name = #{companyName}
+    </select>
 
 </mapper>

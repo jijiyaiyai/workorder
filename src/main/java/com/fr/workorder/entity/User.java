@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NonNull;
 import lombok.experimental.Accessors;
+import org.springframework.validation.annotation.Validated;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -44,9 +46,80 @@ public class User implements Serializable {
      */
     private Integer departmentId;
 
-    private String phone;
+    private String activationCode;
 
     private String email;
 
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Integer getUserType() {
+        return userType;
+    }
+
+    public void setUserType(Integer userType) {
+        this.userType = userType;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getActivated() {
+        return activated;
+    }
+
+    public void setActivated(Boolean activated) {
+        this.activated = activated;
+    }
+
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
+    public Integer getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Integer departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
 }

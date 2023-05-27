@@ -11,13 +11,32 @@
         <result column="activated" property="activated" />
         <result column="company_id" property="companyId" />
         <result column="department_id" property="departmentId" />
-        <result column="phone" property="phone" />
         <result column="email" property="email" />
+        <result column="activation_code" property="activationCode" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, user_name, user_type, password, activated, company_id, department_id, phone, email
+        user_id, user_name, user_type, password, activated, company_id, department_id, email, activation_code
     </sql>
+    <update id="updateActivated">
+        update user
+        set activated = #{b}
+        where user_id = #{userId}
+    </update>
+
+    <select id="selectByEmail" resultType="com.fr.workorder.entity.User">
+        select <include refid="Base_Column_List"/>
+        from user
+        where email = #{email}
+    </select>
+
+    <select id="selectLastId" resultType="java.lang.String">
+        select user_id
+        from user
+        where user_id like #{companyIdAndDepartmentId}
+        order by desc
+        limit 1
+    </select>
 
 </mapper>

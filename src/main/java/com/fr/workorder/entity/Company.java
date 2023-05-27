@@ -18,7 +18,7 @@ public class Company implements Serializable {
     /**
      * 前两位是省/直辖市的拼音首字母（大写），3、4位是市编号，5、6位是区县编号，7、8位是镇级编号
      */
-    @TableId(value = "company_id", type = IdType.AUTO)
+    @TableId(value = "company_id")
     private String companyId;
 
     /**
@@ -44,5 +44,18 @@ public class Company implements Serializable {
 
     private String childCompanyId;
 
+    public Company(){
 
+    }
+    public Company(String companyId, String companyName, Integer companyLevel, String province, String city, String district, String town, String parentCompanyId, String childCompanyId) {
+        this.companyId = companyId;
+        this.companyName = companyName;
+        this.companyLevel = companyLevel;
+        this.province = province;
+        this.city = city;
+        this.district = district;
+        this.town = town;
+        this.parentCompanyId = parentCompanyId;
+        this.childCompanyId = childCompanyId;
+    }
 }

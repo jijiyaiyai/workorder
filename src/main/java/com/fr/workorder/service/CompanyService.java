@@ -5,5 +5,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 
 public interface CompanyService extends IService<Company> {
-
+    int insert(Company company);
 }

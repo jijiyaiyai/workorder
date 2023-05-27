@@ -1,7 +1,7 @@
 package com.fr.workorder.control.advice;
 
 
-import com.fr.workorder.utils.StringUtil;
+import com.fr.workorder.utils.GlobalUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,7 @@ public class ExceptionAdvice {
         if("XMLHttpRequest".equals(xRequestWith)){
             response.setContentType("application/plain;charset=utf-8");
             PrintWriter pw = response.getWriter();
-            pw.write(StringUtil.getJSONString(1,"服务器发生异常！"));
+            pw.write(GlobalUtil.getJSONString(1,"服务器发生异常！"));
         }else{
             response.sendRedirect(request.getContextPath()+"/error");
         }
